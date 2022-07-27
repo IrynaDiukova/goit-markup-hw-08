@@ -1,0 +1,123 @@
+
+
+/* Heder section */
+.header {
+    border-bottom: 1px solid #ECECEC;
+}    
+
+.header-link {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: var(--black-br-txt-cl);
+
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: var(--time-cubic);
+    
+    &:hover,
+    &:focus {
+        color: var(--accent-color);
+    }
+}
+
+.header__container,
+.header__nav,
+.header-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__logo {
+    margin-right: 93px;
+}
+
+.header-list .header-item:not(:last-child) {
+    margin-right: 50px;
+}
+
+.header-list-contact {
+    margin-left: auto;
+}
+.header__logo,
+.footer__logo {
+    font-family: 'Raleway';
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    color: var(--accent-color);
+}
+
+.footer__logo {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.header__logo1 {
+    color: var(--black-txt-cl);
+}
+.footer__logo1 {
+    color:var(--white-cl)
+}
+
+.link-current {
+    position: relative;
+
+    color: var(--accent-color)
+}
+
+.link-current::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    
+    width: 100%;
+    height: 4px;
+    display: inline-block;
+    margin-top: 27px;
+
+    background-color: var(--accent-color);
+    border-radius: 2px;
+
+}
+
+.header-contact {
+    display: flex;
+    align-items: center;
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: var(--Gray46-txt-cl);
+
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: var(--time-cubic);
+
+    &:hover,
+    &:focus {
+        color: var(--accent-color);
+    }
+}
+
+.contact-icon {
+    margin-right: 10px;
+    fill: currentColor;
+
+    &:hover,
+    &:focus {
+        color: var(--accent-color);
+    } 
+}
+
+.portfolio-heder {
+    border-bottom: 1px solid #ECECEC;
+} 
