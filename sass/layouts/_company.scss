@@ -1,20 +1,26 @@
 /* Company section */
-.company__item:not(:last-child) {
-    margin-right: 30px;
-}
-
 .company{
     display: flex;
     justify-content: center;
-
+    margin: -15px;
     margin-top: 50px;
+    flex-wrap: wrap;
+        
+    @media screen and (max-width: 1199px) {
+        flex-wrap: wrap;
+        margin-top: 30px;
+    }
 } 
+.company__item{
+    margin: 15px;
+    
+}
 
 .company__link{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 170px;
+    width: 210px;
     height: 92px;
     color: var(--icon-cl);
     border: 1px solid #AFB1B8;
@@ -28,6 +34,14 @@
     &:focus {
         color: var(--accent-color);
         border: 1px solid #2196F3;
+    }
+
+    @media screen and (min-width: 786px) {
+        width: 226px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        width: 170px;
     }
 }
 

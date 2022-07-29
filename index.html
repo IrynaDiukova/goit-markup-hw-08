@@ -25,14 +25,19 @@
 <body>
 
   <!--Секция хедер-->
+  
 
-  <!-- <header class="header"> 
-
+  <header class="header"> 
+    
     <div class="container header__container">
-    <nav class="header__nav">  
-      <a class="header__logo link" href=""> Web<span class="header__logo1">Studio</span></a>
-
-      <ul class="header-list list">
+        <a class="header__logo link" href=""> Web<span class="header__logo1">Studio</span></a>
+        <button class="menu-button" type="button" data-menu-button>
+          <svg class="menu-icon" width="24" height="16" aria-label="Переключатель мобильного меню">
+            <use class="icon-open-header" href="./images/icons.svg#icon-open-header"></use>
+            <use class="icon-close-header" href="./images/icons.svg#icon-close-header"></use>
+          </svg>
+        </button>
+          <ul class="header-list list">
         <li class="header-item">
           <a class="header-link link link-current" href="">Студия</a>
         </li>
@@ -63,27 +68,28 @@
             </a>
         </li>
       </ul>
+    
     </div>
     
-  </header> -->
+  </header>
 
     <!--Cекция main-->
     <main>
 
       <!--Банер-->
       
-        <!-- <section class="baner">
+        <section class="baner">
           <div class="baner__container container">
           <h1 class="baner__title">Эффективные решения для вашего бизнеса</h1>
           <button class="baner-btn btn" type="button" data-modal-open>Заказать услугу</button>
           </div>
-        </section> -->
+        </section>
 
       <!-- Модальное окно -->
 
-      <!-- <div class="backdrop is-hidden" data-modal>
+      <div class="backdrop is-hidden" data-modal>
         <div class="modal">
-          <button class="close-button" type="button" data-modal-close>
+          <button class="close-button" type="button" data-menu-button>
             <img class="close-icon" src="./images/icons/close.svg" alt="Закрыть">
           </button>
                   
@@ -127,8 +133,47 @@
           
         </div>
     
-      </div> -->
+      </div>
       
+      <!-- Мобильное меню -->
+
+      <div class="mobile-menu" data-menu>
+        <ul class="modile-menu-nav list">
+          <li class="mobile-menu-nav-item">
+            <a class="mobile-menu-nav-link link mobile-menu-link-current" href="./index.html">Студия</a>
+          </li>
+          <li class="mobile-menu-nav-item">
+            <a class="mobile-menu-nav-link link" href="./portfolio.html">Портфолио</a>
+          </li>
+          <li class="mobile-menu-nav-item">
+            <a class="mobile-menu-nav-link link" href="">Контакты</a>
+          </li>
+        </ul>
+        <ul class="mobile-menu-contacts list">
+          <li class="mobile-menu-contacts-item">
+            <a class="mobile-menu-contacts-tel link" href="">+38 096 111 11 11
+            </a>
+          </li>
+          <li class="mobile-menu-contacts-item">
+            <a class="mobile-menu-contacts-mail link" href="">info@devstudio.com</a>
+          </li>
+        </ul>
+        <ul class="mobile-menu-socials list">
+          <li class="mobile-menu-socials-item">
+            <a class="mobile-menu-socials-link link" href="">Instagram</a>
+          </li>
+          <li class="mobile-menu-socials-item">
+            <a class="mobile-menu-socials-link link" href="">Twitter</a>
+          </li>
+          <li class="mobile-menu-socials-item">
+            <a class="mobile-menu-socials-link link" href="">Facebook</a>
+          </li>
+          <li class="mobile-menu-socials-item">
+            <a class="mobile-menu-socials-link link" href="">LinkedIn</a>
+          </li>
+        </ul>
+      </div>
+
       <!--Секция Внимание к деталям-->
 
       <section class="first-section">
@@ -182,21 +227,105 @@
         <h2 class="section">Чем мы занимаемся</h2>
           <ul class="activity__list list">
             <li class="activity__item">
-              <img class="activity__img" 
-              srcset="./images/activity/foto-1_dt.jpg 1x, ./images/activity/foto-1_dt@2x.jpg 2x"
-              src="./images/activity/foto-1_dt.jpg" alt="foto1" width="370">
+              <picture>
+                <source media="(min-width: 1200px)"
+                  srcset="./images/activity/foto-1_dt.webp 1x, ./images/activity/foto-1_dt@2x.webp 2x" type="image/webp" />
+              
+                <source media="(min-width: 1200px)"
+                  srcset="./images/activity/foto-1_dt.jpg 1x, ./images/activity/foto-1_dt@2x.jpg 2x" type="image/jpg" />
+              
+                <source media="(min-width: 768px)"
+                  srcset="./images/activity/foto-1_tb.webp 1x, ./images/activity/foto-1_tb@2x.webp 2x" type="image/webp" />
+              
+                <source media="(min-width: 768px)"
+                  srcset="./images/activity/foto-1_tb.jpg 1x, ./images/activity/foto-1_tb@2x.jpg 2x" type="image/jpg" />
+              
+                <source media="(max-width: 767px)"
+                  srcset="./images/activity/foto-1_mb.webp 1x, ./images/activity/foto-1_mb@2x.webp 2x" type="image/webp" />
+              
+                <source media="(max-width: 767px)"
+                  srcset="./images/activity/foto-1_mb.jpg 1x, ./images/activity/foto-1_mb@2x.jpg 2x" type="image/jpg" />
+              
+                <img class="activity__img" src="./images/activity/foto-1_mb.jpg" alt="foto-1" width="370">
+              
+              </picture>
+              
               <p class="activity__text">Десктопные приложения</p>
             </li>
             <li class="activity__item">
-              <img class="activity__img" 
-              srcset="./images/activity/foto-2_dt.jpg 1x, ./images/activity/foto-2_dt@2x.jpg 2x"
-              src="./images/activity/foto-2_dt.jpg" alt="foto2" width="370">
+              <picture>
+                <source 
+                media="(min-width: 1200px)"
+                srcset="./images/activity/foto-2_dt.webp 1x, ./images/activity/foto-2_dt@2x.webp 2x" 
+                type="image/webp" />
+              
+                <source 
+                media="(min-width: 1200px)" 
+                srcset="./images/activity/foto-2_dt.jpg 1x, ./images/activity/foto-2_dt@2x.jpg 2x"
+                type="image/jpg" />
+              
+                <source 
+                media="(min-width: 768px)"
+                srcset="./images/activity/foto-2_tb.webp 1x, ./images/activity/foto-2_tb@2x.webp 2x" 
+                type="image/webp" />
+              
+                <source 
+                media="(min-width: 768px)" 
+                srcset="./images/activity/foto-2_tb.jpg 1x, ./images/activity/foto-2_tb@2x.jpg 2x"
+                type="image/jpg" />
+              
+                <source 
+                media="(max-width: 767px)"
+                srcset="./images/activity/foto-2_mb.webp 1x, ./images/activity/foto-2_mb@2x.webp 2x" 
+                type="image/webp" />
+              
+                <source 
+                media="(max-width: 767px)" 
+                srcset="./images/activity/foto-2_mb.jpg 1x, ./images/activity/foto-2_mb@2x.jpg 2x"
+                type="image/jpg" />
+              
+                <img class="activity__img" src="./images/activity/foto-2_mb.jpg" alt="foto-2" width="370">
+              
+              </picture>
+              
               <p class="activity__text">Мобильные приложения</p>
             </li>
             <li class="activity__item">
-              <img class="activity__img" 
-              srcset="./images/activity/foto-3_dt.jpg 1x, ./images/activity/foto-3_dt@2x.jpg 2x"
-              src="./images/activity/foto-3_dt.jpg" alt="foto3" width="370">
+              <picture>
+                <source 
+                  media="(min-width: 1200px)"
+                  srcset="./images/activity/foto-3_dt.webp 1x, ./images/activity/foto-3_dt@2x.webp 2x" 
+                  type="image/webp" />
+              
+                <source 
+                  media="(min-width: 1200px)" 
+                  srcset="./images/activity/foto-3_dt.jpg 1x, ./images/activity/foto-3_dt@2x.jpg 2x"
+                  type="image/jpg" />
+              
+                <source 
+                  media="(min-width: 768px)"
+                  srcset="./images/activity/foto-3_tb.webp 1x, ./images/activity/foto-3_tb@2x.webp 2x" 
+                  type="image/webp" />
+              
+                <source 
+                  media="(min-width: 768px)" 
+                  srcset="./images/activity/foto-3_tb.jpg 1x, ./images/activity/foto-3_tb@2x.jpg 2x"
+                  type="image/jpg" />
+              
+                <source 
+                  media="(max-width: 767px)"
+                  srcset="./images/activity/foto-3_mb.webp 1x, ./images/activity/foto-3_mb@2x.webp 2x" 
+                  type="image/webp" />
+              
+                <source 
+                  media="(max-width: 767px)" 
+                  srcset="./images/activity/foto-3_mb.jpg 1x, ./images/activity/foto-3_mb@2x.jpg 2x"
+                  type="image/jpg" />
+              
+                <img class="activity__img" src="./images/activity/foto-3_mb.jpg" alt="foto-3" width="370">
+              
+              </picture>
+              
               <p class="activity__text">Дизайнерские решения</p>
             </li>
           </ul>
@@ -213,9 +342,20 @@
             <picture>
               <source 
               media="(min-width: 1200px)"
+              srcset="./images/team/igor-demyanenko_dt.webp 1x, ./images/team/igor-demyanenko_dt@2x.webp 2x" 
+              type="image/webp" 
+              />
+
+              <source 
+              media="(min-width: 1200px)"
               srcset="./images/team/igor-demyanenko_dt.jpg 1x, ./images/team/igor-demyanenko_dt@2x.jpg 2x" 
               type="image/jpg" />
             
+              <source 
+              media="(min-width: 768px)"
+              srcset="./images/team/igor-demyanenko_tb.webp 1x, ./images/team/igor-demyanenko_tb@2x.webp 2x" 
+              type="image/webp" />
+
               <source 
               media="(min-width: 768px)"
               srcset="./images/team/igor-demyanenko_tb.jpg 1x, ./images/team/igor-demyanenko_tb@2x.jpg 2x" 
@@ -223,10 +363,15 @@
             
               <source 
               media="(max-width: 767px)"
+              srcset="./images/team/igor-demyanenko_mb.webp 1x, ./images/team/igor-demyanenko_mb@2x.webp 2x" 
+              type="image/webp" />
+
+              <source 
+              media="(max-width: 767px)"
               srcset="./images/team/igor-demyanenko_mb.jpg 1x, ./images/team/igor-demyanenko_mb@2x.jpg 2x" 
               type="image/jpg" />
             
-              <img src="./images/team/igor-demyanenko_mb.jpg" alt="igor-demyanenko" width="450">
+              <img src="./images/team/igor-demyanenko_mb.jpg" alt="igor-demyanenko" >
             
             </picture>
             
@@ -268,21 +413,36 @@
           <li class="team__item">
             <picture>
               <source 
+              media="(min-width: 1200px)" 
+              srcset="./images/team/olga-repina_dt.webp 1x, ./images/team/olga-repina_dt@2x.webp 2x"
+              type="image/webp" />
+
+              <source 
               media="(min-width: 1200px)"
               srcset="./images/team/olga-repina_dt.jpg 1x, ./images/team/olga-repina_dt@2x.jpg 2x" 
               type="image/jpg" />
+
+              <source 
+              media="(min-width: 768px)" 
+              srcset="./images/team/olga-repina_tb.webp 1x, ./images/team/olga-repina_tb@2x.webp 2x"
+              type="image/webp" />
             
               <source 
               media="(min-width: 768px)"
               srcset="./images/team/olga-repina_tb.jpg 1x, ./images/team/olga-repina_tb@2x.jpg 2x" 
               type="image/jpg" />
+
+              <source 
+              media="(max-width: 767px)" 
+              srcset="./images/team/olga-repina_mb.webp 1x, ./images/team/olga-repina_mb@2x.webp 2x"
+              type="image/webp" />
             
               <source 
               media="(max-width: 767px)"
               srcset="./images/team/olga-repina_mb.jpg 1x, ./images/team/olga-repina_mb@2x.jpg 2x" 
               type="image/jpg" />
             
-              <img src="./images/team/olga-repina_mb.jpg" alt="olga-repina" width="450" height="460">
+              <img src="./images/team/olga-repina_mb.jpg" alt="olga-repina" >
             
             </picture>
             
@@ -325,9 +485,19 @@
             <picture>
               <source 
               media="(min-width: 1200px)"
+              srcset="./images/team/nikolay-tarasov_dt.webp 1x, ./images/team/nikolay-tarasov_dt@2x.webp 2x" 
+              type="image/webp" />
+
+              <source 
+              media="(min-width: 1200px)"
               srcset="./images/team/nikolay-tarasov_dt.jpg 1x, ./images/team/nikolay-tarasov_dt@2x.jpg 2x" 
               type="image/jpg" />
             
+              <source 
+              media="(min-width: 768px)"
+              srcset="./images/team/nikolay-tarasov_tb.webp 1x, ./images/team/nikolay-tarasov_tb@2x.webp 2x" 
+              type="image/webp" />
+              
               <source 
               media="(min-width: 768px)"
               srcset="./images/team/nikolay-tarasov_tb.jpg 1x, ./images/team/nikolay-tarasov_tb@2x.jpg 2x" 
@@ -335,10 +505,15 @@
             
               <source 
               media="(max-width: 767px)"
+              srcset="./images/team/nikolay-tarasov_mb.webp 1x, ./images/team/nikolay-tarasov_mb@2x.webp 2x" 
+              type="image/webp" />
+              
+              <source 
+              media="(max-width: 767px)"
               srcset="./images/team/nikolay-tarasov_mb.jpg 1x, ./images/team/nikolay-tarasov_mb@2x.jpg 2x" 
               type="image/jpg" />
             
-              <img src="./images/team/nikolay-tarasov_mb.jpg" alt="nikolay-tarasov"  width="450" height="460">
+              <img src="./images/team/nikolay-tarasov_mb.jpg" alt="nikolay-tarasov" >
             
             </picture>
             
@@ -379,6 +554,11 @@
 
           <li class="team__item">
             <picture>
+              <source 
+              media="(min-width: 1200px)"
+              srcset="./images/team/mihail-ermakov_dt.webp 1x, ./images/team/mihail-ermakov_dt@2x.webp 2x" 
+              type="image/webp" />
+
               <source
               media="(min-width: 1200px)"
               srcset="./images/team/mihail-ermakov_dt.jpg 1x, ./images/team/mihail-ermakov_dt@2x.jpg 2x"
@@ -387,9 +567,19 @@
 
               <source 
               media="(min-width: 768px)"
+              srcset="./images/team/mihail-ermakov_tb.webp 1x, ./images/team/mihail-ermakov_tb@2x.webp 2x" 
+              type="image/webp" />
+              
+              <source 
+              media="(min-width: 768px)"
               srcset="./images/team/mihail-ermakov_tb.jpg 1x, ./images/team/mihail-ermakov_tb@2x.jpg 2x" 
               type="image/jpg" 
               />
+
+              <source 
+              media="(max-width: 767px)"
+              srcset="./images/team/mihail-ermakov_mb.webp 1x, ./images/team/mihail-ermakov_mb@2x.webp 2x" 
+              type="image/webp" />
 
               <source 
               media="(max-width: 767px)"
@@ -397,7 +587,7 @@
               type="image/jpg" 
               />
 
-              <img src="./images/team/mihail-ermakov_mb.jpg" alt="mihail-ermakov" width="450" height="460">
+              <img src="./images/team/mihail-ermakov_mb.jpg" alt="mihail-ermakov" >
             
             </picture>
             
@@ -441,7 +631,7 @@
       </section>
     
       <!-- Постоянные клиенты -->
-      <!-- <section class="first-section">
+      <section class="first-section">
         <div class="container">
           <h2 class="section">Постоянные клиенты</h2>
           <ul class="company list">
@@ -491,13 +681,13 @@
         </div>
         
 
-      </section> -->
+      </section>
 
     </main>
 
     <!--Футер-->
 
-    <!-- <footer class="footer">
+    <footer class="footer">
       
       <div class="footer-flex container">
         <div class="footer__container">
@@ -560,18 +750,22 @@
                 <input class="input-mail" type="email" name="mail" placeholder="E-mail">
               </label>
               </div>
-              <button class="footer-btn" type="submit">Подписаться
+              <div class="container-footer-btn">
+                <button class="footer-btn" type="submit">Подписаться
                 <svg class="footer-icon-btn" width="24" height="24">
                   <use href="./images/icons.svg#icon-send"></use>
                 </svg>
               </button>
+            </div>
+              
             </form>
           </div>
       </div>
 
-    </footer> -->
+    </footer>
 
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
   
 </html>

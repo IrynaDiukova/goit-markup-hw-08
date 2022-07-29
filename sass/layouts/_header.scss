@@ -26,24 +26,44 @@
 }
 
 .header__container,
-.header__nav,
-.header-list {
+.header__nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
+.header-list {
+    display: none;
+
+    @media screen and (min-width: 768px) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
 .header__logo {
-    margin-right: 93px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+
+    @media screen and (min-width: 768px) {
+        padding-top: 26px;
+        padding-bottom: 26px;
+        margin-right: 87px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        padding-top: 24px;
+        padding-bottom: 25px;
+        margin-right: 93px;
+    }
+        
 }
 
 .header-list .header-item:not(:last-child) {
     margin-right: 50px;
 }
 
-.header-list-contact {
-    margin-left: auto;
-}
 .header__logo,
 .footer__logo {
     font-family: 'Raleway';
@@ -85,7 +105,6 @@
 
     background-color: var(--accent-color);
     border-radius: 2px;
-
 }
 
 .header-contact {
@@ -108,6 +127,18 @@
     }
 }
 
+.header-list-contact {
+    @media screen and (min-width: 768px) {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: 90px;
+    }
+    @media screen and (min-width: 1200px) {
+        margin-left: auto;
+        flex-wrap: nowrap;
+    }
+}
+
 .contact-icon {
     margin-right: 10px;
     fill: currentColor;
@@ -121,3 +152,13 @@
 .portfolio-heder {
     border-bottom: 1px solid #ECECEC;
 } 
+
+.header-mail {
+    @media screen and (min-width: 768px) {
+        margin-bottom: 10px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        margin-bottom: 0;
+    }
+}

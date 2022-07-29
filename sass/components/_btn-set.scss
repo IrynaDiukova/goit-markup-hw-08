@@ -1,4 +1,9 @@
 .btn-set {
+    @media screen and (max-width:767px) {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
     display: flex;
     justify-content: center;
     margin-bottom: 50px;   

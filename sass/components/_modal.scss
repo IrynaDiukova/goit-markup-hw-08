@@ -4,7 +4,7 @@
     position: fixed;  
     top: 0;
     left: 0;
-    z-index: 1;
+    z-index: 100;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.2);;
@@ -34,6 +34,10 @@
 
     transform: translate(-50%, -50%) scale(1);
     transition: visibility 250ms var(--time-cubic), opacity 250ms var(--time-cubic);
+
+    @media screen and (max-width: 1199px) {
+        width: 450px;
+    }
 }
 
 .close-button {

@@ -23,14 +23,19 @@
 
 <body>
       <!--Секция хедер-->
-  <header class="header portfolio-heder"> 
+  <header class="header">
+  
     <div class="container header__container">
-    <nav class="header__nav">  
       <a class="header__logo link" href=""> Web<span class="header__logo1">Studio</span></a>
-
+      <button class="menu-button" type="button" data-menu-button>
+        <svg class="menu-icon" width="24" height="16" aria-label="Переключатель мобильного меню">
+          <use class="icon-open-header" href="./images/icons.svg#icon-open-header"></use>
+          <use class="icon-close-header" href="./images/icons.svg#icon-close-header"></use>
+        </svg>
+      </button>
       <ul class="header-list list">
         <li class="header-item">
-          <a class="header-link link" href="./index.html">Студия</a>
+          <a class="header-link link " href="./index.html">Студия</a>
         </li>
         <li class="header-item">
           <a class="header-link link link-current" href="">Портфолио</a>
@@ -39,30 +44,71 @@
           <a class="header-link link" href="">Контакты</a>
         </li>
       </ul>
-    </nav>
+      </nav>
   
-    <ul class=" header-list header-list-contact list ">
-      <li class="header-item">
-         <a class="header-contact header-mail link" href="mailto:info@devstudio.com">
-           <svg class="contact-icon" width="16" height="12">
-             <use href="./images/icons.svg#icon-mail"></use>
-           </svg> 
-           info@devstudio.com
-         </a>
-       </li>
-       <li class="header-item">
-         <a class="header-contact link" href="tel:+380961111111">
-           <svg class="contact-icon" width="10" height="16">
-             <use href="./images/icons.svg#icon-phone"></use>
-           </svg>
-           +38 096 111 11 11
-         </a>
-     </li>
-   </ul>
+      <ul class=" header-list header-list-contact list ">
+        <li class="header-item">
+          <a class="header-contact header-mail link" href="mailto:info@devstudio.com">
+            <svg class="contact-icon" width="16" height="12">
+              <use href="./images/icons.svg#icon-mail"></use>
+            </svg>
+            info@devstudio.com
+          </a>
+        </li>
+        <li class="header-item">
+          <a class="header-contact link" href="tel:+380961111111">
+            <svg class="contact-icon" width="10" height="16">
+              <use href="./images/icons.svg#icon-phone"></use>
+            </svg>
+            +38 096 111 11 11
+          </a>
+        </li>
+      </ul>
+  
     </div>
-    
+  
   </header>
 
+  <!-- Мобильное меню -->
+  
+  <div class="mobile-menu" data-menu>
+    <ul class="modile-menu-nav list">
+      <li class="mobile-menu-nav-item">
+        <a class="mobile-menu-nav-link link" href="./index.html">Студия</a>
+      </li>
+      <li class="mobile-menu-nav-item">
+        <a class="mobile-menu-nav-link link mobile-menu-link-current" href="./portfolio.html">Портфолио</a>
+      </li>
+      <li class="mobile-menu-nav-item">
+        <a class="mobile-menu-nav-link link" href="">Контакты</a>
+      </li>
+    </ul>
+    <ul class="mobile-menu-contacts list">
+      <li class="mobile-menu-contacts-item">
+        <a class="mobile-menu-contacts-tel link" href="">+38 096 111 11 11
+        </a>
+      </li>
+      <li class="mobile-menu-contacts-item">
+        <a class="mobile-menu-contacts-mail link" href="">info@devstudio.com</a>
+      </li>
+    </ul>
+    <ul class="mobile-menu-socials list">
+      <li class="mobile-menu-socials-item">
+        <a class="mobile-menu-socials-link link" href="">Instagram</a>
+      </li>
+      <li class="mobile-menu-socials-item">
+        <a class="mobile-menu-socials-link link" href="">Twitter</a>
+      </li>
+      <li class="mobile-menu-socials-item">
+        <a class="mobile-menu-socials-link link" href="">Facebook</a>
+      </li>
+      <li class="mobile-menu-socials-item">
+        <a class="mobile-menu-socials-link link" href="">LinkedIn</a>
+      </li>
+    </ul>
+  </div>
+
+  
     <!--Секция main-->
     <main>
         <!--Секция Портфолио-->
@@ -95,21 +141,36 @@
               <div class="flex-overlay">
                 <picture>
                   <source 
-                    media="(min-width: 1200px)"
-                    srcset="./images/portfolio/website_dt.jpg 1x, ./images/portfolio/website_dt@2x.jpg 2x" 
-                    type="image/jpg" />
+                  media="(min-width: 1200px)"
+                  srcset="./images/portfolio/website_dt.webp 1x, ./images/portfolio/website_dt@2x.webp 2x" 
+                  type="image/webp" />
+                  
+                  <source 
+                  media="(min-width: 1200px)"
+                  srcset="./images/portfolio/website_dt.jpg 1x, ./images/portfolio/website_dt@2x.jpg 2x" 
+                  type="image/jpg" />
                 
                   <source 
-                    media="(min-width: 768px)"
-                    srcset="./images/portfolio/website_tb.jpg 1x, ./images/portfolio/website_tb@2x.jpg 2x" 
-                    type="image/jpg" />
-                
+                  media="(min-width: 768px)"
+                  srcset="./images/portfolio/website_tb.webp 1x, ./images/portfolio/website_tb@2x.webp 2x" 
+                  type="image/webp" />
+
+                  <source 
+                  media="(min-width: 768px)"
+                  srcset="./images/portfolio/website_tb.jpg 1x, ./images/portfolio/website_tb@2x.jpg 2x" 
+                  type="image/jpg" />
+              
+                  <source 
+                  media="(max-width: 767px)"
+                  srcset="./images/portfolio/website_mb.webp 1x, ./images/portfolio/website_mb@2x.webp 2x" 
+                  type="image/webp" />
+                  
                   <source 
                     media="(max-width: 767px)"
                     srcset="./images/portfolio/website_mb.jpg 1x, ./images/portfolio/website_mb@2x.jpg 2x" 
                     type="image/jpg" />
                 
-                  <img src="./images/portfolio/website_mb.jpg" alt="website" width="370">
+                  <img src="./images/portfolio/website_mb.jpg" alt="website" width="450">
                 
                 </picture>
                 
@@ -131,21 +192,36 @@
                 <div class="flex-overlay">
                   <picture>
                     <source 
-                      media="(min-width: 1200px)"
-                      srcset="./images/portfolio/dizain_dt.jpg 1x, ./images/portfolio/dizain_dt@2x.jpg 2x" 
-                      type="image/jpg" />
-                  
+                    media="(min-width: 1200px)" 
+                    srcset="./images/portfolio/dizain_dt.webp 1x, ./images/portfolio/dizain_dt@2x.webp 2x"
+                    type="image/webp" />
+
                     <source 
-                      media="(min-width: 768px)"
-                      srcset="./images/portfolio/dizain_tb.jpg 1x, ./images/portfolio/dizain_tb@2x.jpg 2x" 
-                      type="image/jpg" />
-                  
+                    media="(min-width: 1200px)"
+                    srcset="./images/portfolio/dizain_dt.jpg 1x, ./images/portfolio/dizain_dt@2x.jpg 2x" 
+                    type="image/jpg" />
+
                     <source 
-                      media="(max-width: 767px)"
-                      srcset="./images/portfolio/dizain_mb.jpg 1x, ./images/portfolio/dizain_mb@2x.jpg 2x" 
-                      type="image/jpg" />
+                    media="(min-width: 768px)" 
+                    srcset="./images/portfolio/dizain_tb.webp 1x, ./images/portfolio/dizain_tb@2x.webp 2x"
+                    type="image/webp" />
+
+                    <source 
+                    media="(min-width: 768px)"
+                    srcset="./images/portfolio/dizain_tb.jpg 1x, ./images/portfolio/dizain_tb@2x.jpg 2x" 
+                    type="image/jpg" />
+
+                    <source 
+                    media="(max-width: 767px)" 
+                    srcset="./images/portfolio/dizain_mb.webp 1x, ./images/portfolio/dizain_mb@2x.webp 2x"
+                    type="image/webp" />
+
+                    <source 
+                    media="(max-width: 767px)"
+                    srcset="./images/portfolio/dizain_mb.jpg 1x, ./images/portfolio/dizain_mb@2x.jpg 2x" 
+                    type="image/jpg" />
                   
-                    <img src="./images/portfolio/dizain_mb.jpg" alt="dizain" width="370">
+                    <img src="./images/portfolio/dizain_mb.jpg" alt="dizain" width="450">
                   
                   </picture>
                   
@@ -166,22 +242,37 @@
 
                 <div class="flex-overlay">
                   <picture>
+                    <source
+                    media="(min-width: 1200px)"
+                    srcset="./images/portfolio/restoran_dt.webp 1x, ./images/portfolio/restoran_dt@2x.webp 2x"
+                    type="image/webp" />
+
                     <source 
-                      media="(min-width: 1200px)"
-                      srcset="./images/portfolio/restoran_dt.jpg 1x, ./images/portfolio/restoran_dt@2x.jpg 2x" 
-                      type="image/jpg" />
-                  
+                    media="(min-width: 1200px)"
+                    srcset="./images/portfolio/restoran_dt.jpg 1x, ./images/portfolio/restoran_dt@2x.jpg 2x" 
+                    type="image/jpg" />
+
                     <source 
-                      media="(min-width: 768px)"
-                      srcset="./images/portfolio/restoran_tb.jpg 1x, ./images/portfolio/restoran_tb@2x.jpg 2x" 
-                      type="image/jpg" />
-                  
+                    media="(min-width: 768px)"
+                    srcset="./images/portfolio/restoran_tb.webp 1x, ./images/portfolio/restoran_tb@2x.webp 2x" 
+                    type="image/webp" />
+
                     <source 
-                      media="(max-width: 767px)"
-                      srcset="./images/portfolio/restoran_mb.jpg 1x, ./images/portfolio/restoran_mb@2x.jpg 2x" 
-                      type="image/jpg" />
+                    media="(min-width: 768px)"
+                    srcset="./images/portfolio/restoran_tb.jpg 1x, ./images/portfolio/restoran_tb@2x.jpg 2x" 
+                    type="image/jpg" />
+
+                    <source 
+                    media="(max-width: 767px)"
+                    srcset="./images/portfolio/restoran_mb.webp 1x, ./images/portfolio/restoran_mb@2x.webp 2x" 
+                    type="image/webp" />
+
+                    <source 
+                    media="(max-width: 767px)"
+                    srcset="./images/portfolio/restoran_mb.jpg 1x, ./images/portfolio/restoran_mb@2x.jpg 2x" 
+                    type="image/jpg" />
                   
-                    <img src="./images/portfolio/restoran_mb.jpg" alt="restoran" width="370">
+                    <img src="./images/portfolio/restoran_mb.jpg" alt="restoran" >
                   
                   </picture>
                  
@@ -203,21 +294,36 @@
                 <div class="flex-overlay">
                   <picture>
                     <source 
-                      media="(min-width: 1200px)"
-                      srcset="./images/portfolio/prime_dt.jpg 1x, ./images/portfolio/prime_dt@2x.jpg 2x" 
-                      type="image/jpg" />
-                  
+                    media="(min-width: 1200px)" 
+                    srcset="./images/portfolio/prime_dt.webp 1x, ./images/portfolio/prime_dt@2x.webp 2x"
+                    type="image/webp" />
+
                     <source 
-                      media="(min-width: 768px)"
-                      srcset="./images/portfolio/prime_tb.jpg 1x, ./images/portfolio/prime_tb@2x.jpg 2x" 
-                      type="image/jpg" />
-                  
+                    media="(min-width: 1200px)"
+                    srcset="./images/portfolio/prime_dt.jpg 1x, ./images/portfolio/prime_dt@2x.jpg 2x" 
+                    type="image/jpg" />
+                    
                     <source 
-                      media="(max-width: 767px)"
-                      srcset="./images/portfolio/prime_mb.jpg 1x, ./images/portfolio/prime_mb@2x.jpg 2x" 
-                      type="image/jpg" />
+                    media="(min-width: 768px)" 
+                    srcset="./images/portfolio/prime_tb.webp 1x, ./images/portfolio/prime_tb@2x.webp 2x"
+                    type="image/jpg" />
+
+                    <source 
+                    media="(min-width: 768px)"
+                    srcset="./images/portfolio/prime_tb.jpg 1x, ./images/portfolio/prime_tb@2x.jpg 2x" 
+                    type="image/jpg" />
+
+                    <source 
+                    media="(max-width: 767px)" 
+                    srcset="./images/portfolio/prime_mb.webp 1x, ./images/portfolio/prime_mb@2x.webp 2x"
+                    type="image/webp" />
+
+                    <source 
+                    media="(max-width: 767px)"
+                    srcset="./images/portfolio/prime_mb.jpg 1x, ./images/portfolio/prime_mb@2x.jpg 2x" 
+                    type="image/jpg" />
                   
-                    <img src="./images/portfolio/prime_mb.jpg" alt="prime" width="370">
+                    <img src="./images/portfolio/prime_mb.jpg" alt="prime" >
                   
                   </picture>
                   
@@ -239,21 +345,36 @@
                 <div class="flex-overlay">
                   <picture>
                     <source 
+                    media="(min-width: 1200px)" 
+                    srcset="./images/portfolio/boxes_dt.webp 1x, ./images/portfolio/boxes_dt@2x.webp 2x"
+                    type="image/webp" />
+
+                    <source 
                       media="(min-width: 1200px)"
                       srcset="./images/portfolio/boxes_dt.jpg 1x, ./images/portfolio/boxes_dt@2x.jpg 2x" 
                       type="image/jpg" />
-                  
+
                     <source 
-                      media="(min-width: 768px)"
-                      srcset="./images/portfolio/boxes_tb.jpg 1x, ./images/portfolio/boxes_tb@2x.jpg 2x" 
-                      type="image/jpg" />
-                  
+                    media="(min-width: 768px)" 
+                    srcset="./images/portfolio/boxes_tb.webp 1x, ./images/portfolio/boxes_tb@2x.webp 2x"
+                    type="image/webp" />
+
                     <source 
-                      media="(max-width: 767px)"
-                      srcset="./images/portfolio/boxes_mb.jpg 1x, ./images/portfolio/boxes_mb@2x.jpg 2x"
-                      type="image/jpg" />
+                    media="(min-width: 768px)"
+                    srcset="./images/portfolio/boxes_tb.jpg 1x, ./images/portfolio/boxes_tb@2x.jpg 2x" 
+                    type="image/jpg" />
+                
+                    <source 
+                    media="(max-width: 767px)" 
+                    srcset="./images/portfolio/boxes_mb.webp 1x, ./images/portfolio/boxes_mb@2x.webp 2x"
+                    type="image/webp" />
+
+                    <source 
+                    media="(max-width: 767px)"
+                    srcset="./images/portfolio/boxes_mb.jpg 1x, ./images/portfolio/boxes_mb@2x.jpg 2x"
+                    type="image/jpg" />
                   
-                    <img src="./images/portfolio/boxes_mb.jpg" alt="boxes" width="370">
+                    <img src="./images/portfolio/boxes_mb.jpg" alt="boxes" >
                   
                   </picture>
                   
@@ -275,21 +396,36 @@
                 <div class="flex-overlay">
                   <picture>
                     <source 
-                      media="(min-width: 1200px)"
-                      srcset="./images/portfolio/borders_dt.jpg 1x, ./images/portfolio/borders_dt@2x.jpg 2x" 
-                      type="image/jpg" />
-                  
+                    media="(min-width: 1200px)"
+                    srcset="./images/portfolio/borders_dt.webp 1x, ./images/portfolio/borders_dt@2x.webp 2x" 
+                    type="image/webp" />
+
                     <source 
-                      media="(min-width: 768px)"
-                      srcset="./images/portfolio/borders_tb.jpg 1x, ./images/portfolio/borders_tb@2x.jpg 2x" 
-                      type="image/jpg" />
-                  
+                    media="(min-width: 1200px)"
+                    srcset="./images/portfolio/borders_dt.jpg 1x, ./images/portfolio/borders_dt@2x.jpg 2x" 
+                    type="image/jpg" />
+
                     <source 
-                      media="(max-width: 767px)"
-                      srcset="./images/portfolio/borders_mb.jpg 1x, ./images/portfolio/borders_mb@2x.jpg 2x"
-                      type="image/jpg" />
+                    media="(min-width: 768px)"
+                    srcset="./images/portfolio/borders_tb.webp 1x, ./images/portfolio/borders_tb@2x.webp 2x" 
+                    type="image/webp" />
+
+                    <source 
+                    media="(min-width: 768px)"
+                    srcset="./images/portfolio/borders_tb.jpg 1x, ./images/portfolio/borders_tb@2x.jpg 2x" 
+                    type="image/jpg" />
+
+                    <source 
+                    media="(max-width: 767px)"
+                    srcset="./images/portfolio/borders_mb.webp 1x, ./images/portfolio/borders_mb@2x.webp 2x" 
+                    type="image/webp" />
+
+                    <source 
+                    media="(max-width: 767px)"
+                    srcset="./images/portfolio/borders_mb.jpg 1x, ./images/portfolio/borders_mb@2x.jpg 2x"
+                    type="image/jpg" />
                   
-                    <img src="./images/portfolio/borders_mb.jpg" alt="borders" width="370">
+                    <img src="./images/portfolio/borders_mb.jpg" alt="borders" >
                   
                   </picture>
                   
@@ -311,21 +447,36 @@
                 <div class="flex-overlay">
                   <picture>
                     <source 
-                      media="(min-width: 1200px)"
-                      srcset="./images/portfolio/limited_dt.jpg 1x, ./images/portfolio/limited_dt@2x.jpg 2x" 
-                      type="image/jpg" />
+                    media="(min-width: 1200px)"
+                    srcset="./images/portfolio/limited_dt.webp 1x, ./images/portfolio/limited_dt@2x.webp 2x" 
+                    type="image/webp" />
+
+                    <source 
+                    media="(min-width: 1200px)"
+                    srcset="./images/portfolio/limited_dt.jpg 1x, ./images/portfolio/limited_dt@2x.jpg 2x" 
+                    type="image/jpg" />
+
+                    <source 
+                    media="(min-width: 768px)"
+                    srcset="./images/portfolio/limited_tb.webp 1x, ./images/portfolio/limited_tb@2x.webp 2x" 
+                    type="image/webp" />
                   
                     <source 
-                      media="(min-width: 768px)"
-                      srcset="./images/portfolio/limited_tb.jpg 1x, ./images/portfolio/limited_tb@2x.jpg 2x" 
-                      type="image/jpg" />
-                  
+                    media="(min-width: 768px)"
+                    srcset="./images/portfolio/limited_tb.jpg 1x, ./images/portfolio/limited_tb@2x.jpg 2x" 
+                    type="image/jpg" />
+
+                    <source 
+                    media="(max-width: 767px)"
+                    srcset="./images/portfolio/limited_mb.webp 1x, ./images/portfolio/limited_mb@2x.webp 2x" 
+                    type="image/webp" />
+                
                     <source 
                       media="(max-width: 767px)"
                       srcset="./images/portfolio/limited_mb.jpg 1x, ./images/portfolio/limited_mb@2x.jpg 2x" 
                       type="image/jpg" />
                   
-                    <img src="./images/portfolio/limited_mb.jpg" alt="limited" width="370">
+                    <img src="./images/portfolio/limited_mb.jpg" alt="limited" >
                   
                   </picture>
                   
@@ -347,21 +498,36 @@
                 <div class="flex-overlay">
                   <picture>
                     <source 
-                      media="(min-width: 1200px)"
-                      srcset="./images/portfolio/lab_dt.jpg 1x, ./images/portfolio/lab_dt@2x.jpg 2x" 
-                      type="image/jpg" />
+                    media="(min-width: 1200px)" 
+                    srcset="./images/portfolio/lab_dt.webp 1x, ./images/portfolio/lab_dt@2x.webp 2x"
+                    type="image/webp" />
+
+                    <source 
+                    media="(min-width: 1200px)"
+                    srcset="./images/portfolio/lab_dt.jpg 1x, ./images/portfolio/lab_dt@2x.jpg 2x" 
+                    type="image/jpg" />
+
+                    <source 
+                    media="(min-width: 768px)"
+                    srcset="./images/portfolio/lab_tb.webp 1x, ./images/portfolio/lab_tb@2x.webp 2x" 
+                    type="image/webp" />
                   
                     <source 
-                      media="(min-width: 768px)"
-                      srcset="./images/portfolio/lab_tb.jpg 1x, ./images/portfolio/lab_tb@2x.jpg 2x" 
-                      type="image/jpg" />
+                    media="(min-width: 768px)"
+                    srcset="./images/portfolio/lab_tb.jpg 1x, ./images/portfolio/lab_tb@2x.jpg 2x" 
+                    type="image/jpg" />
+
+                    <source 
+                    media="(max-width: 767px)"
+                    srcset="./images/portfolio/lab_mb.webp 1x, ./images/portfolio/lab_mb@2x.webp 2x"
+                    type="image/webp" />
                   
                     <source 
-                      media="(max-width: 767px)"
-                      srcset="./images/portfolio/lab_mb.jpg 1x, ./images/portfolio/lab_mb@2x.jpg 2x"
-                      type="image/jpg" />
+                    media="(max-width: 767px)"
+                    srcset="./images/portfolio/lab_mb.jpg 1x, ./images/portfolio/lab_mb@2x.jpg 2x"
+                    type="image/jpg" />
                   
-                    <img src="./images/portfolio/lab_mb.jpg" alt="lab" width="370">
+                    <img src="./images/portfolio/lab_mb.jpg" alt="lab" >
                   
                   </picture>
                   <
@@ -382,22 +548,38 @@
 
                 <div class="flex-overlay">
                   <picture>
+
                     <source 
-                      media="(min-width: 1200px)"
-                      srcset="./images/portfolio/groving_dt.jpg 1x, ./images/portfolio/groving_dt@2x.jpg 2x" 
-                      type="image/jpg" />
+                    media="(min-width: 1200px)"
+                    srcset="./images/portfolio/groving_dt.webp 1x, ./images/portfolio/groving_dt@2x.webp 2x" 
+                    type="image/webp" />
+
+                    <source 
+                    media="(min-width: 1200px)"
+                    srcset="./images/portfolio/groving_dt.jpg 1x, ./images/portfolio/groving_dt@2x.jpg 2x" 
+                    type="image/jpg" />
+
+                    <source 
+                    media="(min-width: 768px)"
+                    srcset="./images/portfolio/groving_tb.webp 1x, ./images/portfolio/groving_tb@2x.webp 2x" 
+                    type="image/webp" />
                   
                     <source 
-                      media="(min-width: 768px)"
-                      srcset="./images/portfolio/groving_tb.jpg 1x, ./images/portfolio/groving_tb@2x.jpg 2x" 
-                      type="image/jpg" />
+                    media="(min-width: 768px)"
+                    srcset="./images/portfolio/groving_tb.jpg 1x, ./images/portfolio/groving_tb@2x.jpg 2x" 
+                    type="image/jpg" />
+
+                    <source 
+                    media="(max-width: 767px)"
+                    srcset="./images/portfolio/groving_mb.webp 1x, ./images/portfolio/groving_mb@2x.webp 2x"
+                    type="image/webp" />
                   
                     <source 
-                      media="(max-width: 767px)"
-                      srcset="./images/portfolio/groving_mb.jpg 1x, ./images/portfolio/groving_mb@2x.jpg 2x"
-                      type="image/jpg" />
+                    media="(max-width: 767px)"
+                    srcset="./images/portfolio/groving_mb.jpg 1x, ./images/portfolio/groving_mb@2x.jpg 2x"
+                    type="image/jpg" />
                   
-                    <img src="./images/portfolio/groving_mb.jpg" alt="groving" width="370">
+                    <img src="./images/portfolio/groving_mb.jpg" alt="groving" >
                   
                   </picture>
                   
@@ -421,78 +603,83 @@
 
     <!--Футер-->
     <footer class="footer">
-      
+    
       <div class="footer-flex container">
         <div class="footer__container">
-        <a class="footer__logo link" href=""> Web<span class="footer__logo1">Studio</span></a>
-        
-        <address class="footer-address">
-          <ul class="footer-address__list list">
-            <li class="footer-address__link" >г. Киев, пр-т Леси Украинки, 26</li>
-            <li class="footer-address__link">
-              <a  class="footer-address__contact link" href="mailto:info@example.com">info@example.com</a>
-            </li>
-            <li class="footer-address__link">
-              <a class="footer-address__contact link" href="tel:+380991111111">+38 099 111 11 11</a>
-            </li>
-          </ul>       
-        </address>
+          <a class="footer__logo link" href=""> Web<span class="footer__logo1">Studio</span></a>
+    
+          <address class="footer-address">
+            <ul class="footer-address__list list">
+              <li class="footer-address__link">г. Киев, пр-т Леси Украинки, 26</li>
+              <li class="footer-address__link">
+                <a class="footer-address__contact link" href="mailto:info@example.com">info@example.com</a>
+              </li>
+              <li class="footer-address__link">
+                <a class="footer-address__contact link" href="tel:+380991111111">+38 099 111 11 11</a>
+              </li>
+            </ul>
+          </address>
         </div>
-
-          <div class="footer-icons">
-            <p class="footer-title">присоединяйтесь</p>
-
-            <ul class="footer-media__list list">           
-                <li class="footer-media__item">
-                  <a class="footer-media__link link" href="" target="_blank" rel="noopener noreferrer" aria-label="instagram" >
-                    <svg class="footer-media__icon" width="20" height="20">
-                      <use href="./images/icons.svg#icon-instagram"></use>
-                    </svg>
-                  </a>
-                </li> 
-
-                <li class="footer-media__item">
-                  <a class="footer-media__link link" href="" target="_blank" rel="noopener noreferrer" aria-label="twitter" >
-                    <svg class="footer-media__icon" width="20" height="20">
-                      <use href="./images/icons.svg#icon-twitter"></use>
-                    </svg>
-                  </a>
-                </li> 
-                <li class="footer-media__item">
-                  <a class="footer-media__link link" href="" target="_blank" rel="noopener noreferrer" aria-label="facebook" >
-                    <svg class="footer-media__icon" width="20" height="20">
-                      <use href="./images/icons.svg#icon-facebook"></use>
-                    </svg>
-                  </a>
-                </li> 
-                <li class="footer-media__item">
-                  <a class="footer-media__link link" href="" target="_blank" rel="noopener noreferrer" aria-label="linkedin" >
-                    <svg class="footer-media__icon" width="20" height="20">
-                      <use href="./images/icons.svg#icon-linkedin"></use>
-                    </svg>
-                  </a>
-                </li> 
-            </ul>  
-          </div> 
-          
-          <div class="footer-subscribe">
-            <p class="footer-title">Подпишитесь на рассылку</p>
-            <form class="footer-form">
-              <div class="footer-mail">
+    
+        <div class="footer-icons">
+          <p class="footer-title">присоединяйтесь</p>
+    
+          <ul class="footer-media__list list">
+            <li class="footer-media__item">
+              <a class="footer-media__link link" href="" target="_blank" rel="noopener noreferrer" aria-label="instagram">
+                <svg class="footer-media__icon" width="20" height="20">
+                  <use href="./images/icons.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+    
+            <li class="footer-media__item">
+              <a class="footer-media__link link" href="" target="_blank" rel="noopener noreferrer" aria-label="twitter">
+                <svg class="footer-media__icon" width="20" height="20">
+                  <use href="./images/icons.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="footer-media__item">
+              <a class="footer-media__link link" href="" target="_blank" rel="noopener noreferrer" aria-label="facebook">
+                <svg class="footer-media__icon" width="20" height="20">
+                  <use href="./images/icons.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="footer-media__item">
+              <a class="footer-media__link link" href="" target="_blank" rel="noopener noreferrer" aria-label="linkedin">
+                <svg class="footer-media__icon" width="20" height="20">
+                  <use href="./images/icons.svg#icon-linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+    
+        <div class="footer-subscribe">
+          <p class="footer-title">Подпишитесь на рассылку</p>
+          <form class="footer-form">
+            <div class="footer-mail">
               <label class="lable-mail">
                 <input class="input-mail" type="email" name="mail" placeholder="E-mail">
               </label>
-              </div>
+            </div>
+            <div class="container-footer-btn">
               <button class="footer-btn" type="submit">Подписаться
                 <svg class="footer-icon-btn" width="24" height="24">
                   <use href="./images/icons.svg#icon-send"></use>
                 </svg>
               </button>
-            </form>
-          </div>
+            </div>
+    
+          </form>
+        </div>
       </div>
-
+    
     </footer>
+
+  <script src="./js/mobile-menu.js"></script>
 
 </body>
 </html>
