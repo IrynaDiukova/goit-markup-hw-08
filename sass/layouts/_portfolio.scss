@@ -1,6 +1,7 @@
 /*Portfolio section*/
 
 .portfolio-sign {
+    flex-grow: 1;
     padding: 20px 24px; 
     border-right: 1px solid #EEEEEE;
     border-bottom: 1px solid #EEEEEE;
@@ -24,25 +25,24 @@
 }
 
 .flex-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 
     @media screen and (min-width: 768px) {
-        display: flex;
+        flex-direction: row;
         flex-wrap: wrap;
-        gap: 30px;
-        
     }  
-  
+
 }
 
-.flex-element { 
-
-    @media screen and (min-width: 768px) {
-        
+.flex-element {      
+    @media screen and (max-width: 1199px) {
         flex-basis: calc((100% - 30px) / 2);
     }
 
     @media screen and (min-width: 1200px) {
-        flex-basis: calc((100% - 90px) / 3);
+        flex-basis: calc((100% - 60px) / 3);
     }
 }
 
@@ -53,6 +53,10 @@
 }
 
 .portfolio-link {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    
     transition-property: box-shadow;
     transition-duration: 250ms;
     transition-timing-function: var(--time-cubic);
@@ -63,5 +67,4 @@
     }
 
 }
-
 

@@ -2,12 +2,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
     border: none;
     background-color: transparent;
     width: 40px;
     height: 40px;
+
     padding: 0;
     z-index: 100;
+
     cursor: pointer;
 
     @media screen and (min-width: 768px) {
@@ -17,6 +20,7 @@
 
 .icon-open-header {
     transition: 500ms;
+
     .menu-button.is-open & {
         opacity: 0;
     }
@@ -34,6 +38,7 @@
 
     .menu-button.is-open & {
         opacity: 1;
+
     }
 }
 

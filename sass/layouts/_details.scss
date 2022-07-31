@@ -1,6 +1,8 @@
 /*Details section*/
 
 .details{
+  display: flex;
+  flex-direction: column;
   gap: 30px;
 
 
@@ -20,10 +22,6 @@
 
 .details__item {
   max-width: 450px;
-  // margin-left: 0;
-
-  // &:not(:last-child) {
-  // margin-right: 30px;
 
   @media screen and (min-width: 768px) {
     max-width: 354px;
@@ -41,7 +39,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 450px;
+  max-width: 450px;
   height: 120px;
   border-radius: 4px;
   background-color: var(--fone-cl);
