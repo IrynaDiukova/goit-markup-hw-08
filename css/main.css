@@ -786,6 +786,17 @@ textarea {
   margin-right: 50px;
 }
 
+@media screen and (min-width: 768px) {
+  .header-list .header-item-contact:not(:last-child) {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header-list .header-item-contact:not(:last-child) {
+    margin-right: 50px;
+  }
+}
+
 .header__logo,
 .footer__logo {
   font-family: "Raleway";
@@ -835,8 +846,8 @@ textarea {
       -ms-flex-align: center;
           align-items: center;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
+  font-size: 12px;
+  line-height: 1.17;
   letter-spacing: 0.02em;
   color: var(--Gray46-txt-cl);
   -webkit-transition-property: color;
@@ -849,6 +860,12 @@ textarea {
 .header-contact:hover, .header-contact:focus {
   color: var(--accent-color);
 }
+@media screen and (min-width: 1200px) {
+  .header-contact {
+    font-size: 14px;
+    line-height: 1.14;
+  }
+}
 
 @media screen and (min-width: 768px) {
   .header-list-contact {
@@ -857,7 +874,7 @@ textarea {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    margin-left: 90px;
+    margin-left: 84px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -871,6 +888,11 @@ textarea {
 .contact-icon {
   margin-right: 10px;
   fill: currentColor;
+}
+@media screen and (max-width: 1199px) {
+  .contact-icon {
+    margin-right: 8px;
+  }
 }
 .contact-icon:hover, .contact-icon:focus {
   color: var(--accent-color);
@@ -1371,8 +1393,21 @@ textarea {
             align-items: baseline;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer-flex {
     -ms-flex-pack: distribute;
         justify-content: space-around;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer__container {
+    margin-right: 165px;
   }
 }
 
@@ -1441,7 +1476,6 @@ textarea {
 }
 
 .footer-title {
-  text-align: center;
   margin-bottom: 20px;
   font-style: normal;
   font-weight: 700;
@@ -1450,6 +1484,11 @@ textarea {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--white-cl);
+}
+@media screen and (max-width: 1199px) {
+  .footer-title {
+    text-align: center;
+  }
 }
 
 @media screen and (max-width: 1199px) {
@@ -1507,6 +1546,12 @@ textarea {
   fill: currentColor;
 }
 
+@media screen and (max-width: 1199px) {
+  .footer-subscribe {
+    max-width: 450px;
+    width: 100%;
+  }
+}
 @media screen and (max-width: 767px) {
   .footer-subscribe {
     margin-top: 60px;
